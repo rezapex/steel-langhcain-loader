@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "steel-browser"
+version = "0.1.0"
+description = "Steel Browser Automation Toolkit"
+readme = "README.md"
+requires-python = ">=3.8"
+
+dependencies = [
+    "steel-sdk>=0.1.0b3",
+    "playwright>=1.48.0",
+    "python-dotenv>=1.0.0",
+    "langchain-core",
+    "langchain-community"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "isort"
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/steel-browser"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
